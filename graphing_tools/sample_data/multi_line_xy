@@ -1,0 +1,13 @@
+legend=squares
+2 4
+3 9
+4 16
+legend=cubes
+1 1
+2 8
+3 27
+legend=roots
+1 1
+2 1.41
+3 1.732
+4 2
