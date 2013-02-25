@@ -15,14 +15,12 @@ parser.add_option("-f", "--file", dest = "raw", help = "The raw file to be proce
 parser.add_option("-t", "--title", help = "The title of your chart")
 parser.add_option("-x", "--xlabel", help = "The ylabel of your chart")
 parser.add_option("-y", "--ylabel", help = "The xlabel of your chart")
-parser.add_option("-b", "--bins", help = "The number of bins in the distribution")
 
 options, args = parser.parse_args()
 raw = options.raw
 title = options.title
 xlab = options.xlabel
 ylab = options.ylabel
-bins = options.bins
 
 if not raw:
 	print "Invalid Raw File"
