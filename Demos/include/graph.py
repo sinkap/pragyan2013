@@ -63,19 +63,32 @@ def graph_plot():
 	if key == 'line':
 		pylab.figure()
 		index = 0
+		flag = False
 		for value in plotDict[key]:
-			pylab.plot(value, label=titleDict[key][index])
+			lab = titleDict[key][index]
+			if lab != "None":
+				flag = True
+			pylab.plot(value, label = lab)
 			index += 1	
-		pylab.legend();
+		if flag:
+			pylab.legend();
 		processKeyValues(lineDict)
 
 	if key == 'logx':
 		pylab.figure()
 		index = 0
+		flag = False
 		for value in plotDict[key]:
-			pylab.semilogx(value, label=titleDict[key][index])
+			lab = titleDict[key][index]
+			
+			if lab != "None":
+				flag = True
+
+			pylab.semilogx(value, label=lab)
 			index += 1
-		pylab.legend()
+		if flag:
+			pylab.legend()
+
 		processKeyValues(logxDict)
 
 
@@ -83,24 +96,34 @@ def graph_plot():
 		pylab.figure()
 		ctr = 0
 		index = 0
+		flag = False
 		for value in plotDict[key]:
 			
 			if ctr == 7:
 				print "scatter limit"
-				break
-			pylab.scatter(value[0], value[1], label = titleDict[key][index],marker=markers[ctr], color=colours[ctr])
+			lab = titleDict[key][index]
+
+			if lab != "None":
+				flag = True
+			pylab.scatter(value[0], value[1], label = lab,marker=markers[ctr], color=colours[ctr])
 			index += 1
 			ctr += 1
-		pylab.legend()
+		if flag:
+			pylab.legend()
 		processKeyValues(scatterDict)
 
 	elif key == 'hist':
 		pylab.figure()
 		index = 0
+		flag = False
 		for value in plotDict[key]:
-			pylab.hist(value, label=titleDict[key][index])
-			index += 1 
-		pylab.legend()
+			lab = titleDict[key][index]
+			if lab != "None":
+				flag = True
+			pylab.hist(value, normed = True, label=lab)
+			index += 1
+		if flag:
+			pylab.legend()
 		processKeyValues(histDict)
 
 
