@@ -2,6 +2,7 @@
 #define GRAPHER_H
 #include <fcntl.h>
 #include <stdio.h>
+#include <stdlib.h>
 #define SCATTER 'S'
 #define HIST 'H'
 #define LINE 'L'

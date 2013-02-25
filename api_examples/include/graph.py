@@ -120,7 +120,7 @@ def graph_plot():
 			lab = titleDict[key][index]
 			if lab != "None":
 				flag = True
-			pylab.hist(value, normed = True, label=lab)
+			pylab.hist(value, normed = True, label=lab, bins = 60)
 			index += 1
 		if flag:
 			pylab.legend()
