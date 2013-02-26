@@ -8,7 +8,7 @@ x = diff(x,1)
 
 library("rugarch")
 z = matrix(rnorm(666*30), ncol = 30)
-kp = ugarchspec(mean.model = list(armaOrder = c(2,1,0), arfima = TRUE), variance.model = list(garchOrder = c(1, 
+kp = ugarchspec(mean.model = list(armaOrder = c(2,1,0)), variance.model = list(garchOrder = c(1, 
     1), model = "sGARCH"))
 a = ugarchfit(spec = kp,data = x, solver.control=list(trace = 1))
 f = ts(fitted(a))

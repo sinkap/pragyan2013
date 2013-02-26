@@ -14,7 +14,7 @@ if len(sys.argv) != 2:
 graph_file = sys.argv[1]
 
 
-markers = [ 'o', 'D', 'h', '+', '*', 'v', 'x' ] 
+markers = [ 'o', 'd', 'h', '+', '*', 'v', 'x' ] 
 colours = ['b', 'g', 'r', 'c', 'm', 'y', 'k' ] 
 lineDict ={}
 scatterDict = {}
